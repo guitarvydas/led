@@ -1,6 +1,6 @@
-Bred {
+Led {
 
-  // a bred spec consists of 2 lines (1) what to match and (2) what to replace the match with
+  // a led spec consists of 2 lines (1) what to match and (2) what to replace the match with
   
   main = spaces firstPattern spaces secondPattern spaces
 

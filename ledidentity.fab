@@ -1,4 +1,4 @@
-Bred {
+Led {
   main [spaces1 firstPattern spaces2 secondPattern spaces3] = ‛«spaces1»«firstPattern»«spaces2»«secondPattern»«spaces3»’
 
   firstPattern [lq firstitem+ rq] = ‛«lq»«firstitem»«rq»’
