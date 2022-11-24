@@ -1,0 +1,21 @@
+Bred {
+
+  // a bred spec consists of 2 lines (1) what to match and (2) what to replace the match with
+  
+  main = spaces firstPattern spaces secondPattern spaces
+
+  firstPattern = "‛" firstitem+ "’"
+  firstitem =
+    | "«" name "»" -- variable
+    | space -- space
+    | (~"«" ~"»" ~"‛" ~"’" ~space any)+ -- characters
+  secondPattern = "‛" seconditem+ "’"
+  seconditem =
+    | "«" name "»" -- variable
+    | space -- space
+    | (~"«" ~"»" ~"‛" ~"’" ~space any)+ -- characters
+
+  name = nameFirst nameRest*
+  nameFirst = letter
+  nameRest = alnum
+}
