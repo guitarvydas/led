@@ -24,3 +24,13 @@ outputport.out => the regex transpiled from outputport.led
 
 first: run 'make install' to get the node_js and subrepos needed
 "fab" is the "fabricator" transpiler (see Makefile for usage)
+
+The name "led" comes from "Line-oriented stream EDitor"
+"led" simply does REGEX-like things, whereas "bred" parses bracketed things
+"bred" is recursive, "led" is not recursive
+
+approach:
+1. do the simplest version first
+   - match verbatim characters
+   - match variables (enclosed in «...» unicode brackets)
+N. maybe enhance patterns if there are some common use-cases that can't be handled easily
